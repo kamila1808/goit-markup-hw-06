@@ -620,6 +620,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-list-link {
+font-style: normal;
 font-weight: 400;
 font-size: 14px;
 line-height: 1.71;
@@ -727,6 +728,8 @@ background-color: var(--accent-background);
 border: 1px solid rgba(255, 255, 255, 0.3);
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 border-radius: 4px;
+
+color: #FFFFFF;
 }
 
 .footer-mailing-input::placeholder {
@@ -759,7 +762,6 @@ text-align: center;
 letter-spacing: 0.06em;
 
 color: #FFFFFF;
-
 }
 
 
@@ -1005,13 +1007,17 @@ margin-bottom: 12px;
 color: #212121;
 }
 
-/* Марджин задаем соседним элементам */
-.contact-form-label {
-margin-bottom: 10px;
-position: relative;
+
+.contact-form-input-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
 }
 
-.contact-form-label-span {
+
+/* Марджин задаем соседним элементам */
+.contact-form-label {
 font-family: var(--main-font);
 font-weight: 400;
 font-size: 12px;
@@ -1019,16 +1025,15 @@ line-height: 1.17;
 
 letter-spacing: 0.01em;
 
+margin-bottom: 4px;
+
 color: #757575;
 }
 
-.contact-form-input-wrapper {
-    position: relative;
-}
 
 .contact-form-input {
 width: 100%;
-height: 40px;
+height: 40px; 
 
 padding-left: 42px;
 
@@ -1045,11 +1050,11 @@ border-color: var(--accent-color);
 
 .contact-form-input-icon {
     position: absolute;
-    top: 50%;
+    display: inline-block;
+    top: 70%;
     left: 12px;
-    transform: translateY(-50%);
-    display: block;
-
+    transform: translateY(-70%);
+    
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1071,6 +1076,7 @@ padding: 12px 16px;
 resize: none;
 
 transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .contact-form-message:focus {
@@ -1082,15 +1088,21 @@ border-color: var(--accent-color);
 color: rgba(117, 117, 117, 0.5);
 }
 
+.contact-form-checkbox {
+    color:#FFFFFF;
+}
 
 .contact-form-checkbox-label {
-    display: flex;
-    align-items: center;
+display: flex;
+justify-content: center;
+align-items: center;
 
 font-family: var(--main-font);
 font-weight: 400;
 font-size: 14px;
 line-height: 1.71;
+
+margin-top: 20px;
 
 letter-spacing: 0.03em;
 
